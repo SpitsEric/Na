@@ -4,12 +4,12 @@
     width: 100%;
     left: 0;
     top: 0;
-    padding: 1.5rem 1rem;
+    padding: 1.5rem 2.5rem;
 }
 
 .portfolios {
     display: block;
-    margin: 0 auto;
+    width: 100%;
 }
   .portfolios .portfolio-item {
     width: calc(33.333% - 0.75rem);

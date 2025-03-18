@@ -66,7 +66,7 @@
     cursor: pointer;
 }
 .name {
-    font-size: x-large;
+    font-size: 1.5rem;
     position: absolute;
     top: 40%;
     left: 50%;
