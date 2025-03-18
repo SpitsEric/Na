@@ -24,7 +24,7 @@
 .header {
     display: flex;
     flex-direction: row;
-    padding: 3%;
+    padding: 1%;
 }
 
 .header .insta {
@@ -40,6 +40,7 @@
 }
 
 .insta i, .mail i {
+    padding-left: 1rem;
     color: black;
 }
 
@@ -79,7 +80,7 @@
     display: flex;
     flex-direction: column;
     min-height: 100vh;
-    background-image: url(bg/fishbg.jpg);
+    background-image: url(bg/flowerbg.jpg);
     background-attachment: fixed;
     background-size:cover;
     position: relative;
@@ -88,7 +89,8 @@
 
 /* Typewriter effect */
 .typewriter h1 {
-    color: #db96a4;
+    color: rgb(0, 0, 0);
+    text-shadow: 1px 1px 2px pink;
     overflow: hidden;
     border-right: .15em solid orange;
     white-space: nowrap;
