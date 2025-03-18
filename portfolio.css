@@ -10,7 +10,6 @@
 .portfolios {
     display: block;
     margin: 0 auto;
-    max-width: 1200px;
 }
   .portfolios .portfolio-item {
     width: calc(33.333% - 0.75rem);
