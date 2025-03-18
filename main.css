@@ -1,0 +1,108 @@
+@import url(portfolio.css);
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.wave {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    line-height: 0;
+    margin-bottom: -25px;
+}
+  
+.wave svg {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+.header {
+    display: flex;
+    flex-direction: row;
+    padding: 3%;
+}
+
+.header .insta {
+    color: black;
+    font-size: 2rem;
+    cursor: pointer;
+}
+.header .mail {
+    color: black;
+    padding-left: 1%;
+    font-size: 2rem;
+    cursor: pointer;
+}
+
+.insta i, .mail i {
+    color: black;
+}
+
+.footer {
+    width: 100%;
+    background-color: #db96a4;
+    display: flex;
+    flex-direction: row;
+    padding-top: .5rem;
+    padding-bottom: .5rem;
+    justify-content: center;
+}
+
+.footer .insta {
+    color: black;
+    font-size: 2rem;
+    cursor: pointer;
+}
+.footer .mail {
+    color: black;
+    padding-left: 1%;
+    font-size: 2rem;
+    cursor: pointer;
+}
+.name {
+    font-size: x-large;
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.hero {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    background-image: url(bg/fishbg.jpg);
+    background-attachment: fixed;
+    background-size:cover;
+    position: relative;
+}
+
+
+/* Typewriter effect */
+.typewriter h1 {
+    color: #db96a4;
+    overflow: hidden;
+    border-right: .15em solid orange;
+    white-space: nowrap;
+    margin: 0 auto;
+    letter-spacing: .15em;
+    animation: typing 2s steps(40, end), blink-caret .75s step-end infinite;
+}
+
+@keyframes typing {
+    from { width: 0; }
+    to { width: 100%; }
+}
+
+@keyframes blink-caret {
+    from, to { border-color: transparent; }
+    50% { border-color: black; }
+}
