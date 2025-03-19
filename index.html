@@ -13,6 +13,7 @@
 </head>
 <body>
     <section class="hero">
+        <div class="hero-bg"></div>
         <div class="header">
             <div class="insta">
                 <a href="https://www.instagram.com/nataliepedigo2" target="_blank">
@@ -26,8 +27,8 @@
             </div>
         </div>
         <div class="name">
-            <div class="typewriter">
-                <h1>Natalie Pedigo Art</h1>
+            <div class="title">
+                <h1 class="preload">Natalie Pedigo Art</h1>
             </div>
         </div>
         <div class="wave">
@@ -310,6 +311,22 @@
                     }, 0); // Longer debounce time
                 });
             });
+        });
+    </script>
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            const heroBg = document.querySelector(".hero-bg");
+
+            function updateParallax() {
+                const scrollY = window.scrollY;
+                const zoomScale = 1 + scrollY * 0.0003; // Adjust zoom speed
+                heroBg.style.transform = `translateY(${scrollY * 0.5}px) scale(${zoomScale})`;
+            }
+
+    // Run once on page load to set the correct position
+            updateParallax();
+
+            window.addEventListener("scroll", updateParallax);
         });
     </script>
 </body>

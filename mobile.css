@@ -2,6 +2,9 @@
     .hero {
         min-height: 80vh;
     }
+    .hero-bg {
+        background-position: center;
+    }
 
     .portfolios .portfolio-item {
         width: calc(50% - 10px);

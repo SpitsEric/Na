@@ -9,29 +9,21 @@ function PortfolioModal() {
     let modalTitle = null;
     let portfolioData = [];
 
-    // **Preload portfolio data on page load**
-    function loadPortfolioData() {
-        portfolioItems.forEach((item) => {
-            const imgElement = item.querySelector("img");
-            const modalId = item.dataset.modal;
-            const modalElement = document.getElementById(modalId);
-            const modalTextElement = modalElement?.querySelector(".modal-text h3");
-            
-            if (imgElement && modalTextElement) {
-                portfolioData.push({
-                    imgSrc: imgElement.src,
-                    title: modalTextElement.innerText,
-                });
-            }
-        });
-    }
-
     // Function to open a modal
     function openModal(modalId, index) {
         currentModal = document.getElementById(modalId);
         if (currentModal) {
             modalImage = currentModal.querySelector("img");
-            modalTitle = currentModal.querySelector(".modal-text h3");
+            modalTitle = currentModal.querySelector(".modal-text h3"); // Get modal title
+            const portfolioItemsArray = Array.from(document.querySelectorAll(".portfolio-item"));
+
+            portfolioData = portfolioItemsArray.map((item) => {
+                const itemImg = item.querySelector("img").src;
+                const modalId = item.dataset.modal;
+                const modalText = document.querySelector(`#${modalId} .modal-text h3`);
+                const itemTitle = modalText ? modalText.innerText : "Untitled";
+                return { imgSrc: itemImg, title: itemTitle };
+            });
 
             currentIndex = index;
             updateModalContent(currentIndex);
@@ -57,9 +49,6 @@ function PortfolioModal() {
         modalTitle.innerText = portfolioData[index].title;
         currentIndex = index;
     }
-
-    // **Load data once when the page loads**
-    loadPortfolioData();
 
     // Add click event listeners to portfolio items
     portfolioItems.forEach((item, index) => {
