@@ -1,6 +1,6 @@
 @media (max-width: 600px){
     .hero {
-        min-height: 85vh;
+        min-height: 80vh;
     }
 
     .portfolios .portfolio-item {
