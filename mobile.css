@@ -1,0 +1,9 @@
+@media (max-width: 600px){
+    .hero {
+        min-height: 85vh;
+    }
+
+    .portfolios .portfolio-item {
+        width: calc(50% - 10px);
+      }
+}

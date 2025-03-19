@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <link rel="stylesheet" href="main.css">
+    <link rel="stylesheet" href="mobile.css">
     <script src="https://unpkg.com/masonry-layout@4/dist/masonry.pkgd.min.js"></script>
     <script src="https://unpkg.com/imagesloaded@4/imagesloaded.pkgd.min.js"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
@@ -71,6 +72,26 @@
                     <img src="art-pics/stretchy.jpg" alt="">
                 </div>
             </div>
+            <div class="portfolio-item" data-modal="modal7">
+                <div class="image">
+                    <img src="art-pics/brainboy.jpg" alt="">
+                </div>
+            </div>
+            <div class="portfolio-item" data-modal="modal8">
+                <div class="image">
+                    <img src="art-pics/house.jpg" alt="">
+                </div>
+            </div>
+            <div class="portfolio-item" data-modal="modal9">
+                <div class="image">
+                    <img src="art-pics/jester.jpg" alt="">
+                </div>
+            </div>
+            <div class="portfolio-item" data-modal="modal10">
+                <div class="image">
+                    <img src="art-pics/oops.jpg" alt="">
+                </div>
+            </div>
         </div>
         <div class="modal" id="modal1">
             <div class="modal-overlay"></div>
@@ -126,6 +147,42 @@
                 </div>
             </div>
         </div>
+        <div class="modal" id="modal7">
+            <div class="modal-overlay"></div>
+            <div class="modal-content">
+                <span class="close">&times;</span> <img src="art-pics/brainboy.jpg" alt="Artwork 3 Full">
+                <div class="modal-text">
+                    <h3>Brain Boy</h3>
+                </div>
+            </div>
+        </div>
+        <div class="modal" id="modal8">
+            <div class="modal-overlay"></div>
+            <div class="modal-content">
+                <span class="close">&times;</span> <img src="art-pics/house.jpg" alt="Artwork 3 Full">
+                <div class="modal-text">
+                    <h3>House</h3>
+                </div>
+            </div>
+        </div>
+        <div class="modal" id="modal9">
+            <div class="modal-overlay"></div>
+            <div class="modal-content">
+                <span class="close">&times;</span> <img src="art-pics/jester.jpg" alt="Artwork 3 Full">
+                <div class="modal-text">
+                    <h3>Jester</h3>
+                </div>
+            </div>
+        </div>
+        <div class="modal" id="modal10">
+            <div class="modal-overlay"></div>
+            <div class="modal-content">
+                <span class="close">&times;</span> <img src="art-pics/oops.jpg" alt="Artwork 3 Full">
+                <div class="modal-text">
+                    <h3>Oops</h3>
+                </div>
+            </div>
+        </div>
     </section>
 
     <hr color="black">
@@ -143,6 +200,7 @@
     </div>
 
     <script src="app.js"></script>
+
     <script>
         document.addEventListener("DOMContentLoaded", function () {
             var grid = document.querySelector(".portfolios");
