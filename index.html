@@ -10,6 +10,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Natalie Art</title>
     <link rel="icon" type="image/x-icon" href="/favicon/favicon.jpg">
+    <style>
+        .modal { display: none; }
+    </style>  
 </head>
 <body>
     <section class="hero">
@@ -28,7 +31,7 @@
         </div>
         <div class="name">
             <div class="title">
-                <h1 class="preload">Natalie Pedigo Art</h1>
+                <h1 class="typewriter"></h1>
             </div>
         </div>
         <div class="wave">
@@ -37,7 +40,6 @@
             </svg>
         </div>
     </section>
-
     <section class="portfolio-sec">
         <div class="main-title">
             <h2><span>Portfolio</span></h2>
@@ -111,6 +113,11 @@
             <div class="portfolio-item" data-modal="modal14">
                 <div class="image">
                     <img src="art-pics/sun.jpg" alt="">
+                </div>
+            </div>
+            <div class="portfolio-item" data-modal="modal15">
+                <div class="image">
+                    <img src="art-pics/slumber.jpg" alt="">
                 </div>
             </div>
         </div>
@@ -268,6 +275,17 @@
                 </div>
             </div>
         </div>
+        <div class="modal" id="modal15">
+            <div class="modal-overlay"></div>
+            <div class="modal-content">
+                <span class="close">&times;</span> <img src="art-pics/slumber.jpg" alt="Artwork 3 Full">
+                <button class="nav-arrow left-arrow">&#10094;</button> <!-- Left Arrow -->
+                <button class="nav-arrow right-arrow">&#10095;</button> <!-- Right Arrow -->
+                <div class="modal-text">
+                    <h3>Slumber</h3>
+                </div>
+            </div>
+        </div>
     </section>
 
     <hr color="black">
@@ -289,28 +307,26 @@
     <script>
         document.addEventListener("DOMContentLoaded", function () {
             var grid = document.querySelector(".portfolios");
-            var masonry;
-    
-            function initMasonry() {
-                masonry = new Masonry(grid, {
+            
+            imagesLoaded(grid, function () {
+                new Masonry(grid, {
                     itemSelector: ".portfolio-item",
                     columnWidth: ".portfolio-item",
-                    gutter: 10
-                });
-            }
-    
-            imagesLoaded(grid, function () {
-                initMasonry();
-    
-                let resizeTimer;
-                window.addEventListener("resize", function () {
-                    clearTimeout(resizeTimer);
-                    resizeTimer = setTimeout(function () {
-                        masonry.destroy(); // Destroy current layout
-                        initMasonry(); // Reinitialize Masonry
-                    }, 0); // Longer debounce time
+                    gutter: 10,
+                    horizontalOrder: true
                 });
             });
+        });
+
+        window.addEventListener("resize", function () {
+            var msnry = new Masonry(".portfolios", {
+                itemSelector: ".portfolio-item",
+                columnWidth: ".portfolio-item",
+                gutter: 10,
+                horizontalOrder: true
+            });
+
+            msnry.layout();
         });
     </script>
     <script>
@@ -323,7 +339,7 @@
                 heroBg.style.transform = `translateY(${scrollY * 0.5}px) scale(${zoomScale})`;
             }
 
-    // Run once on page load to set the correct position
+            // Run once on page load to set the correct position
             updateParallax();
 
             window.addEventListener("scroll", updateParallax);

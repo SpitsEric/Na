@@ -99,48 +99,54 @@
     justify-content: center;
 }
 
-/* main.css or your main stylesheet */
-
-.title h1 {
-    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    text-transform: uppercase;
-    cursor: default;
-    color:#db96a4;
+@keyframes typing {
+    0%, 5% { content: "N"; }
+    10% { content: "NA"; }
+    15% { content: "NAT"; }
+    20% { content: "NATA"; }
+    25% { content: "NATAL"; }
+    30% { content: "NATALI"; }
+    35% { content: "NATALIE"; }
+    40% { content: "NATALIE "; }
+    45% { content: "NATALIE P"; }
+    50% { content: "NATALIE PE"; }
+    55% { content: "NATALIE PED"; }
+    60% { content: "NATALIE PEDI"; }
+    65% { content: "NATALIE PEDIG"; }
+    70% { content: "NATALIE PEDIGO"; }
+    75% { content: "NATALIE PEDIGO "; }
+    80% { content: "NATALIE PEDIGO A"; }
+    85% { content: "NATALIE PEDIGO AR"; }
+    90%, 100% { content: "NATALIE PEDIGO ART"; }
+  }
+  
+  @keyframes blink {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0; }
+  }
+  
+  .title h1 {
+    font-family:'Courier New', Courier, monospace;
     text-shadow: 1px 1px 2px black;
-    white-space: nowrap;
-    margin: 0 auto;
-    letter-spacing: .15em;
-    opacity: 0;
-    transform: translateY(-20px); /* Adjust slide distance as needed */
-    transition: opacity 1s ease, transform 1s ease;
-}
-
-.title h1.animated {
-    opacity: 1;
-    transform: translateY(0);
-}
-
-.title h1.preload {
-    opacity: 0;
-    transform: translateY(-20px);
-}
-
-.title h1.preload.animated {
-    opacity: 1;
-    transform: translateY(0);
-}
-
-.title h1.preload {
-    animation: initialLoad 2s forwards;
-}
-
-@keyframes initialLoad {
-    0% {
-        opacity: 0;
-        transform: translateY(-20px);
-    }
-    100% {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
+    color:#db96a4;
+    text-align: center;
+    font-weight: 700;
+    margin: 1rem 0;
+  }
+  
+  .typewriter {
+    --caret: currentcolor;
+    display: inline-block;
+    position: relative;
+  }
+  
+  .typewriter::before {
+    content: "";
+    animation: typing 4s steps(30) forwards;
+  }
+  
+  .typewriter::after {
+    content: "";
+    border-right: 2px solid var(--caret);
+    animation: blink 0.6s linear infinite;
+  }

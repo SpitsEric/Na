@@ -142,3 +142,24 @@ document.addEventListener("DOMContentLoaded", function () {
         modal.style.display = "none";
     });
 });
+
+document.addEventListener("DOMContentLoaded", function () {
+  const portfolioItems = document.querySelectorAll(".portfolio-item");
+
+  const observerOptions = {
+      root: null, // viewport
+      rootMargin: "0px",
+      threshold: 0.2, // Trigger when 20% of the item is visible
+  };
+
+  const fadeInOnScroll = new IntersectionObserver((entries, observer) => {
+      entries.forEach(entry => {
+          if (entry.isIntersecting) {
+              entry.target.classList.add("show"); // Apply fade-in effect
+              observer.unobserve(entry.target); // Stop observing after it appears
+          }
+      });
+  }, observerOptions);
+
+  portfolioItems.forEach(item => fadeInOnScroll.observe(item));
+});
