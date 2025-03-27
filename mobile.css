@@ -8,5 +8,9 @@
 
     .portfolios .portfolio-item {
         width: calc(50% - 10px);
-      }
+    }
+
+    .name {
+        font-size: 3.9vw;
+    }
 }
