@@ -10,3 +10,5 @@ This is the online art portfolio for Natalie Pedigo, showcasing a collection of 
 * **Responsive Design:** Adapts seamlessly to various screen sizes (desktop, tablet, mobile).
 * **Clean and Minimalist Design:** Focuses attention on the artwork itself without distractions.
 * **Interactive modals:** When an artwork is clicked, a modal appears displaying the full peice, as well as arrows to navigate through the collection.
+
+![NPAss](https://github.com/user-attachments/assets/b653eabc-6302-4496-aeed-4d995c1785fb)
