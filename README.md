@@ -1,6 +1,6 @@
 # Natalie-Pedigo-Art
 
-[![Website Link](https://img.shields.io/badge/View%20Website-Natalie--Pedigo--Art-brightgreen)](https://spitseric.github.io/Natalie-Pedigo-Art/))
+[![Website Link](https://img.shields.io/badge/View%20Website-Natalie--Pedigo--Art-brightgreen)](https://spitseric.github.io/Natalie-Pedigo-Art/)
 
 This is the online art portfolio for Natalie Pedigo, showcasing a collection of her artwork. The website is built using HTML for structure, CSS for styling, and JavaScript for interactive elements.
 
